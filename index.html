@@ -464,7 +464,7 @@ https://www.facebook.com/dogon86
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form id="contact" action="MAILTO:dogon86@gmail.com" method="post">
+                        <form id="contact" action="/send.php" method="post">
                             <div class="row">
                                 <div class="col-md-12">
                                   <fieldset>
@@ -561,5 +561,21 @@ https://www.facebook.com/dogon86
         };
     }
     </script>
+	
+	<script type="text/javascript">
+$(document).ready(function(){
+    $("#contact").submit(function() { //устанавливаем событие отправки для формы с id=contact
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+            type: "POST", //Метод отправки
+            url: "send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отпрвлено!");
+            });
+    });
+});    
+</script>
 </body>
 </html>
