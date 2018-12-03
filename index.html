@@ -564,7 +564,8 @@ https://www.facebook.com/dogon86
 	
 	<script type="text/javascript">
 $(document).ready(function(){
-    $("#contact").submit(function() { //устанавливаем событие отправки для формы с id=contact
+    $("#contact").submit(function(e) { //устанавливаем событие отправки для формы с id=contact
+	    e.preventDefault()
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
             type: "POST", //Метод отправки
