@@ -161,7 +161,7 @@ body {
 nav {
     top: 10vh;
     bottom: 10vh;
-    text-align: center;
+    text-align: left;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: 100;
@@ -192,7 +192,7 @@ nav .mini-logo {
 
 nav .logo {
     margin-top: 45px;
-    padding: 0px 20px;
+    padding: 0px 5px;
 }
 
 nav .logo img {
